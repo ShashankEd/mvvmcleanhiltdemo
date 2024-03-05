@@ -1,4 +1,4 @@
-package com.shashank.mvvmcleanhiltdemo.feature1.data.api
+package com.shashank.mvvmcleanhiltdemo.feature1.data.service
 
 import com.shashank.jetpackmvvmcleanretrofit.feature1.data.dto.AllArticlesDto
 import com.shashank.mvvmcleanhiltdemo.feature1.data.dto.PeopleDto

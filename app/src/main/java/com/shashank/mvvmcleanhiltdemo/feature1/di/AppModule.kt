@@ -1,11 +1,10 @@
 package com.shashank.mvvmcleanhiltdemo.feature1.di
 
-import android.app.Application
 import android.content.Context
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.shashank.mvvmcleanhiltdemo.feature1.core.utils.Constants
-import com.shashank.mvvmcleanhiltdemo.feature1.data.api.PeopleAPI
+import com.shashank.mvvmcleanhiltdemo.feature1.data.service.PeopleAPI
 import com.shashank.mvvmcleanhiltdemo.feature1.data.datasource.NewsDataSource
 import com.shashank.mvvmcleanhiltdemo.feature1.data.repository.PeopleRepositoryImpl
 import com.shashank.mvvmcleanhiltdemo.feature1.domain.repository.PeopleRepository
@@ -21,7 +20,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import shashank.mvvmcleanhiltdemo.db.NewsDatabase
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
-import javax.sql.DataSource
 
 @InstallIn(SingletonComponent::class)
 @Module

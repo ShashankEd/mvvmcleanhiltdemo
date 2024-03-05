@@ -3,7 +3,7 @@ package com.shashank.mvvmcleanhiltdemo.feature1.data.repository
 import com.shashank.jetpackmvvmcleanretrofit.feature1.domain.model.AllArticles
 import com.shashank.mvvmcleanhiltdemo.feature1.core.common.Resource
 import com.shashank.mvvmcleanhiltdemo.feature1.core.utils.Constants
-import com.shashank.mvvmcleanhiltdemo.feature1.data.api.PeopleAPI
+import com.shashank.mvvmcleanhiltdemo.feature1.data.service.PeopleAPI
 import com.shashank.mvvmcleanhiltdemo.feature1.data.datasource.NewsDataSource
 import com.shashank.mvvmcleanhiltdemo.feature1.data.mapper.toDomainAllArticles
 import com.shashank.mvvmcleanhiltdemo.feature1.data.mapper.toDomainPeople
