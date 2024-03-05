@@ -4,5 +4,7 @@ import com.shashank.mvvmcleanhiltdemo.feature1.domain.repository.PeopleRepositor
 import javax.inject.Inject
 
 class PeopleUseCase @Inject constructor(private val repository: PeopleRepository) {
-    operator fun invoke() = repository.getPeople()
+    fun getPeople() = repository.getPeople()
+
+    fun getAllArticles(filter: String) = repository.getAllArticles(filter)
 }

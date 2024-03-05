@@ -81,4 +81,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
     implementation("androidx.navigation:navigation-compose:2.7.6")
+    //pull to refresh
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.24.13-rc")
+    implementation("io.coil-kt:coil-compose:2.6.0")
 }

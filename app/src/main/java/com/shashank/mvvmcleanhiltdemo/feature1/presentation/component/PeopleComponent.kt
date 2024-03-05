@@ -9,8 +9,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.shashank.mvvmcleanhiltdemo.feature1.data.mapper.toDomainData
 import com.shashank.mvvmcleanhiltdemo.feature1.presentation.state.PeopleViewModelState
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
 fun PeopleComponent(modifier: Modifier, peopleViewModelState: PeopleViewModelState) {
@@ -20,7 +24,11 @@ fun PeopleComponent(modifier: Modifier, peopleViewModelState: PeopleViewModelSta
         }
     } else if (peopleViewModelState.errorMessage.isNullOrEmpty()) {
         Box(modifier = modifier.fillMaxSize()) {
-            Text(text = peopleViewModelState.errorMessage.toString(), modifier = modifier.align(Alignment.Center))
+            Text(
+                text = peopleViewModelState.errorMessage.toString(),
+                modifier = modifier.align(Alignment.Center),
+                color = Color.Blue
+            )
         }
     }
 
