@@ -1,0 +1,16 @@
+CREATE TABLE Article (
+   author TEXT NOT NULL,
+   title TEXT NOT NULL,
+   urlToImage TEXT NOT NULL,
+   publishedAt TEXT NOT NULL
+);
+insertArticle:
+INSERT INTO Article(author, title, urlToImage, publishedAt)
+VALUES(?, ?, ?, ?);
+
+selectAllArticles:
+SELECT Article.*
+FROM Article;
+
+removeAllArticles:
+DELETE FROM Article;

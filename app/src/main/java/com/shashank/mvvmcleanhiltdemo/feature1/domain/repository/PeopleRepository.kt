@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
 //@InstallIn(ViewModelComponent::class)
 interface PeopleRepository {
     fun getPeople(): Flow<Resource<People>>
-    fun getAllArticles(filter: String): Flow<Resource<AllArticles>>
+    fun getAllArticles(filter: String,forceRefresh: Boolean): Flow<Resource<AllArticles>>
 }

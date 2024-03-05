@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("app.cash.sqldelight")
 }
 
 android {
@@ -84,4 +85,14 @@ dependencies {
     //pull to refresh
     implementation("com.google.accompanist:accompanist-swiperefresh:0.24.13-rc")
     implementation("io.coil-kt:coil-compose:2.6.0")
+    //sql delight
+    implementation("app.cash.sqldelight:android-driver:2.0.0")
+    implementation("app.cash.sqldelight:coroutines-extensions-jvm:2.0.0")
+}
+sqldelight {
+    databases {
+        create("NewsDatabase") {
+            packageName.set("shashank.mvvmcleanhiltdemo.db")
+        }
+    }
 }

@@ -60,7 +60,7 @@ fun ArticleComposable(peopleViewModel: PeopleViewModel) {
 
 
     LaunchedEffect("callapi") {
-        peopleViewModel.getAllArticles("bitcoin")
+        peopleViewModel.getAllArticles("bitcoin", false)
     }
 
     //with column Lazylist is not appearing
@@ -85,7 +85,7 @@ private fun ArticleListView(
 ) {
     SwipeRefresh(
         state = SwipeRefreshState(swipeState), onRefresh = {
-            peopleViewModel.getAllArticles("bitcoin")
+            peopleViewModel.getAllArticles("bitcoin", true)
         }) {
         LazyColumn(modifier = modifier.fillMaxSize().padding(top = 40.dp)) {
             articlesViewModelState.articles?.let {

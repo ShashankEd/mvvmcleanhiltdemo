@@ -40,8 +40,8 @@ class PeopleViewModel @Inject constructor(private val peopleUseCase: PeopleUseCa
         }.launchIn(viewModelScope)
     }
 
-    fun getAllArticles(filter: String) {
-        peopleUseCase.getAllArticles(filter).onEach {
+    fun getAllArticles(filter: String, forceRefresh: Boolean) {
+        peopleUseCase.getAllArticles(filter,forceRefresh).onEach {
             when(it) {
                 is Resource.Error -> {
                     _articlesState.value = AllArticlesViewModelState().copy(errorMessage = it.status)
